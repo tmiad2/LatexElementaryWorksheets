@@ -1,0 +1,94 @@
+\documentclass[letter]{article}
+\usepackage[hmargin=0.5cm,vmargin=1.0cm,bindingoffset=0.0cm]{geometry}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage[letterspace=150]{microtype}
+\usepackage{array}
+\usepackage{wrapfig,lipsum,graphicx}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\pagestyle{empty}
+\parskip = 1.0 cm
+\parindent = 0.0 cm
+
+\newcommand\blank{\underline{\hspace{2cm}}} % Gives a blank 
+\newcounter{prob} % A new counter for current problem number
+\setcounter{prob}{1} % Start the counter at the value 1
+\newcommand\itm{
+\fbox{\textbf{\theprob}} \refstepcounter{prob}
+} % Calls problem number
+\newcommand{\problem}[1]{\makebox[0.5cm]{\itm}   
+  \begin{minipage}[t]{\textwidth-0.5cm} #1 \end{minipage} 
+}
+\newcommand\divi[2]{
+#2 \: \begin{array}{|l}
+\hline #1
+\end{array}
+}
+
+\newcommand\mult[2]{
+$\begin{array}{rr} 
+ & #1 \\ 
+ \times & #2 \\ \hline 
+ \end{array}$}
+ 
+\newcommand\addi[2]{
+  $\begin{array}{rr} 
+   &  #1 \\ 
+    + & #2 \\ \hline 
+  \end{array}$}
+
+\newcommand\subt[2]{
+  $\begin{array}{rr}
+    & #1 \\ 
+    - & #2 \\ \hline
+  \end{array}$}
+\begin{document}
+\setlength{\extrarowheight}{0.12cm}
+\renewcommand\addi[2]{
+\hspace*{5mm}\begin{tabular}{rr} \vspace{-2mm}
+ & #1 \\
+ $ + $ & #2 \\ \hline \vspace*{4.0mm}
+ \end{tabular}}
+\renewcommand\subt[2]{
+\hspace*{5mm}\begin{tabular}{rr} \vspace{-2mm}
+ & #1 \\
+ $ - $ & #2 \\ \hline \vspace*{4.0mm}
+ \end{tabular}}
+\renewcommand\mult[2]{
+\hspace*{5mm}\begin{tabular}{rr} \vspace{-2mm}
+ & #1 \\
+ $ \times $ & #2 \\ \hline \vspace*{4.0mm}
+ \end{tabular}}
+
+ 
+
+\begin{center} 
+  \textsc{Arithmetic Worksheet}
+\end{center} 
+
+
+\begin{wrapfigure}[8]{c}{2cm}
+  \centering
+  \includegraphics[width=\linewidth]{Ryan.jpg}
+\end{wrapfigure}
+
+        \begin{Huge}
+Date:\underline{\hspace*{6cm}} \hfill
+Name:\underline{\hspace*{6cm}}
+\lsstyle
+
+
+
+$$
+\begin{array}{cccc}
+\subt{39}{12} & \subt{461}{232} & \subt{22069}{869} & \subt{941}{405}\\
+\addi{721}{34274} & \addi{6889}{72626} & \divi{67}{9} & \addi{58790}{628}\\
+\subt{1405}{673} & \addi{3804}{55966} & \divi{102}{7} & \mult{4}{3}\\
+\mult{2}{4} & \divi{117}{57} & \mult{0}{1} & \mult{4}{3}\\
+\addi{620}{80658} & \mult{2}{12} & \addi{194}{91205} & \subt{1177}{570}\\
+\end{array}
+$$
+\end{Huge}
+\end{document}
